@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Administrador</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #E0E1DD;
+            color: #1B263B;
+        }
+        header {
+            background: #1B263B;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .container {
+            width: 95%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+        h2 {
+            text-align: center;
+            color: #415A77;
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background: #1B263B;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #C2C9D0;
+            text-align: center;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+        tr:nth-child(even) {
+            background: #F6F7F8;
+        }
+        .corrigir-links a {
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 0 3px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .baixo {
+            background: #A7F3D0;
+            color: #064E3B;
+        }
+        .moderado {
+            background: #FDE68A;
+            color: #7C5800;
+        }
+        .urgente {
+            background: #FCA5A5;
+            color: #7F1D1D;
+        }
+        .logout-btn {
+            display: block;
+            width: 150px;
+            text-align: center;
+            margin: 30px auto 0;
+            padding: 12px;
+            background: #415A77;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .logout-btn:hover {
+            background: #1B263B;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        🩺 Painel do Administrador
+    </header>
+
+    <div class="container">
+
+        <h2>Registros de Triagem</h2>
+
+        <table>
+            <tr>
+                <th>Índice</th>
+                <th>Sintomas</th>
+                <th>Idade</th>
+                <th>Temp.</th>
+                <th>Dor</th>
+                <th>Doença</th>
+                <th>Mov.</th>
+                <th>Risco Previsto</th>
+                <th>Corrigir</th>
+            </tr>
+
+            {% for linha in tabela %}
+            <tr>
+                <td>{{ loop.index0 }}</td>
+                <td>{{ linha.sintomas }}</td>
+                <td>{{ linha.idade }}</td>
+                <td>{{ linha.temperatura }}</td>
+                <td>{{ linha.nivel_dor }}</td>
+                <td>{{ linha.doenca_cronica }}</td>
+                <td>{{ linha.consegue_mover }}</td>
+                <td>{{ linha.risco_previsto }}</td>
+
+                <td class="corrigir-links">
+                    <a class="baixo" href="/admin/corrigir/{{ loop.index0 }}/baixo">Baixo</a>
+                    <a class="moderado" href="/admin/corrigir/{{ loop.index0 }}/moderado">Moderado</a>
+                    <a class="urgente" href="/admin/corrigir/{{ loop.index0 }}/urgente">Urgente</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a class="logout-btn" href="/logout">Sair</a>
+    </div>
+
+</body>
+</html>

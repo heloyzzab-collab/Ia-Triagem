@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Triagem Médica</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #E0E1DD; 
+            color: #1B263B; 
+        }
+        header {
+            background: #1B263B; 
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container {
+            width: 450px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+        h2 {
+            text-align: center;
+            color: #415A77; 
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #1B263B;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #778DA9; 
+            border-radius: 8px;
+            margin-top: 5px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #415A77; 
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #1B263B; 
+        }
+        .admin-btn {
+            display: block;
+            text-align: center;
+            background: #1B263B;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.2s;
+        }
+        .admin-btn:hover {
+            background: #415A77;
+        }
+        .icon-med {
+            font-size: 40px;
+            color: #1B263B;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+         Sistema de Triagem Médica
+    </header>
+    <div class="container">
+        <div class="icon-med">⚕️</div>
+        <h2>Avaliação Inicial</h2>
+
+        <form action="/resultado" method="post">
+
+            <label>Sintomas</label>
+            <input name="sintomas" placeholder="Ex.: febre, tosse, dor no peito">
+            <label>Idade</label>
+            <input name="idade" type="number" placeholder="Ex.: 32">
+            <label>Temperatura (°C)</label>
+            <input name="temperatura" type="number" step="0.1" placeholder="Ex.: 38.5">
+            <label>Doença crônica</label>
+            <input name="doenca" placeholder="Ex.: diabetes, hipertensão, asma ou nenhuma">
+            <label>Tempo de sintomas (horas)</label>
+            <input name="tempo" type="number" placeholder="Ex.: 12">
+            <label>Nível de dor (0 a 10)</label>
+            <input name="dor" type="number" min="0" max="10" placeholder="Ex.: 6">
+            <label>Consegue mover?</label>
+            <input name="mover" placeholder="Ex.: sim / não">
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+
+        <a class="admin-btn" href="/login">Área do Administrador</a>
+    </div>
+</body>
+</html>

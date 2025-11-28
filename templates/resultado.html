@@ -1,0 +1,78 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Triagem</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #E0E1DD;
+            color: #1B263B;
+        }
+        header {
+            background: #1B263B;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .container {
+            width: 450px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .titulo {
+            color: #415A77;
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .risco {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background: #415A77;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background: #1B263B;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+         Resultado da Triagem
+    </header>
+
+    <div class="container">
+        <div class="titulo">Classificação do Risco</div>
+        <div class="risco">
+            {{ risco }}
+        </div>
+        <a href="/triagem">← Voltar para Triagem</a>
+    </div>
+
+</body>
+</html>

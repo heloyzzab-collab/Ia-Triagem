@@ -1,0 +1,15 @@
+sintomas;idade;temperatura;doenca_cronica;tempo_sintomas_h;nivel_dor;consegue_mover;risco;risco_previsto;risco_correto
+febre muito alta;40;40.0;nenhuma;62.0;9;sim;;urgente;urgente
+febre muito alta;40;40.0;nenhuma;62.0;8;sim;;urgente;urgente
+diarreia;15;36.4;nenhuma;2.0;4;sim;;moderado;baixo
+mordida de cachorro;10;36.4;nenhuma;1.0;8;sim;;urgente;urgente
+dor de cabeça;40;36.4;nenhuma;2.0;3;sim;;baixo;baixo
+dor de cabeça, dor de garganta, tosse e rouquidão;20;36.0;nenhuma;48.0;8;sim;;moderado;moderado
+corte;19;36.3;nenhuma;1.0;3;sim;;baixo;baixo
+dor de cabeça;8;36.3;nenhuma;1.0;5;sim;;moderado;moderado
+dor de cabeça;8;36.3;nenhuma;1.0;3;sim;;baixo;baixo
+dor no corpo e nas articulações, dor nos olhos, dor de cabeça e febre alta;32;39.2;nenhuma;62.0;7;sim;;urgente;urgente
+dor de cabeça;8;36.0;nenhuma;4.0;3;sim;;baixo;baixo
+dor de cabeça;8;36.0;nenhuma;4.0;3;sim;;baixo;baixo
+febre, olhos vermelhos e dor de garganta ;23;38.5;nenhuma;48.0;7;sim;;urgente;urgente
+febre, olhos vermelhos e dor de garganta ;23;38.5;nenhuma;48.0;7;sim;;urgente;urgente
